@@ -1,0 +1,20 @@
+<!-- <mat-tab-group (selectedTabChange)="changeView($event)">
+  <mat-tab *ngFor="let navigationItem of navigationItems" label="{{navigationItem.title}}" active="{true}">
+    {{navigationItem.title}}
+  </mat-tab>
+</mat-tab-group>
+
+
+<nav mat-tab-nav-bar>
+  <a mat-tab-link *ngFor="let navigationItem of navigationItems" (click)="activeLink=navigationItem.path"
+    [active]="activeLink==navigationItem.path"> {{navigationItem.title}} </a>
+</nav> -->
+
+<ul>
+  <li *ngFor="let navigationItem of navigationItems" [ngClass]="{'nav-activated': navigationItem.path == routerpath }">
+    <a [routerLink]="[navigationItem.path]">
+      <mat-icon>{{navigationItem.icon}}</mat-icon>
+      {{navigationItem.title}}
+    </a>
+  </li>
+</ul>

@@ -3,24 +3,33 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { FirstComponent } from './first/first.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { HeaderComponent } from './header/header.component';
-import { NavigationComponent } from './navigation/navigation.component';
+import { AppLayoutModule } from './app-layout/app-layout.module';
+import { HeaderComponent } from './app-layout/header/header.component';
+import { NavigationComponent } from './app-layout/navigation/navigation.component';
+import { SkillsModule } from './skills/skills.module';
+import { AboutComponent } from './about/about.component';
+import { IntrestsModule } from './intrests/intrests.module';
+import { MaterialDesignModule } from './material-design.module';
+import { EducationModule } from './education/education.module';
 
 @NgModule({
 	declarations: [
 		AppComponent,
-		FirstComponent,
-		HeaderComponent,
-		NavigationComponent
+		AboutComponent
 	],
 	imports: [
 		BrowserModule,
 		AppRoutingModule,
-		BrowserAnimationsModule
+		BrowserAnimationsModule,
+		AppLayoutModule,
+		SkillsModule,
+		IntrestsModule,
+		EducationModule,
+		MaterialDesignModule
 	],
-	providers: [],
 	bootstrap: [HeaderComponent, NavigationComponent, AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+
+}
